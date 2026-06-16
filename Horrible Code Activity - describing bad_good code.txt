@@ -1,0 +1,15 @@
+﻿Horrible Code Activity
+Team members: Preston Moore, Cesar Funes-Funes, Lauren Bell, Shane Moua, Mika Klymenko
+
+
+Bad Code (Preston Moore, Cesar Funes-Funes): 
+The code is logically wrong (subtraction is multiplication, multiply isn't logically correct recursion), while having “wet” comments (the code is simple enough for obvious comments to be removed to declutter the code). This code needs to go through MAJOR refactoring due to undefined and unused variables. The code wasn't tested as well, since the code did not run properly. The code also violates single responsibility since there's a method that has nothing to do with the calculator class at all. Readability is bad ex. “subtractingtwonumbers”. Inheritance is also used unnecessarily, and is also useless since ScientificCalculator is nowhere to be found. 
+
+
+
+
+Good Code (Lauren Bell, Shane Moua, Mika Klymenko): 
+        Principles used
+1. KISS/DRY - We simplified the original bad code by removing unnecessary lines in both the addition and subtraction functions, specifically the variables x and thisistheresult, as they were not needed for the function to work as efficiently as possible. We also removed the loop in the multiply() function, updating every function to include only 1 line of code, ensuring the program is  as “dry” and simple as possible.
+2. YAGNI - We removed the unnecessary method (tell_me_a_story) in the original bad code, as it was not relevant for this specific calculator program. Similar to the KISS/DRY principle, we removed unnecessary variables that were not used/needed for this program.
+3. Single Responsibility -  The Calculator class originally inherited the ScientificCalculator class, which would be incorrect as the ScientificCalculator should be the one inheriting the Calculator class (a simple program). This could lead to an explosion of other subclasses and issues, making the program useless. We removed the inheritance variable entirely to ensure composition over inheritance.
