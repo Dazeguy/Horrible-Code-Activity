@@ -1,4 +1,4 @@
-class Calculator:
+class Calculator(ScientificCalculator):
     # add two numbers
     def addition(self, input1, input2):
         x = input1 + input2
